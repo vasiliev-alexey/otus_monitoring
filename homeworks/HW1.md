@@ -1,7 +1,7 @@
 ## ДЗ: Настройка zabbix, создание LLD, оповещение на основе триггеров
 
 0. Разворачиваем zabbix  через [docker-compose](../zabbix/install/docker-compose_v3_ubuntu_pgsql_latest.yaml.yaml)
-1. Cоздаем [скрипт](zabbix/alert/produce.sh). отдающий через  zabbix_sender  метрики на zabbix сервер
+1. Cоздаем [скрипт](../zabbix/alert/produce.sh). отдающий через  zabbix_sender  метрики на zabbix сервер
 2. [Регистрируем локальный хост](./img/z_srv_reg.png)  как наблюдаемый узел в Zabbix
 3. Создаем [наблюдаемые метрики](./img/z-metrics.png)
 4. Создаем [триггер](./img/z-metrics.png) для оповещеия 
