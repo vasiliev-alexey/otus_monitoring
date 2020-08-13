@@ -1,0 +1,24 @@
+phantom:
+  address: localhost:8080
+  ssl: false
+  load_profile:
+    load_type: rps
+    schedule: line(10, 50, 2m) const(100, 5m)
+  ammofile: ammo.txt
+  instances: 30
+
+#autostop:
+#  autostop:
+#    - time(500, 60s)
+#    - net(110, 75%, 100s)
+
+telegraf:
+  enabled: false
+  config: monitoring.xml
+  kill_old: false
+
+overload:
+  enabled: false
+  job_name: POST requests
+  job_dsc: line(1000, 205000, 5m) const(205000, 5m) | 100 instances | 2 cores
+  token_file: token.txt

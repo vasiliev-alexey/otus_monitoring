@@ -2,3 +2,8 @@ notes.md
 docker
 zabbix/install/zbx_env
 zabbix/install/.ZBX_DB_*_FILE
+/prometheus/prometheus/*
+!/prometheus/prometheus/.gitkeep
+prometheus/load_test/logs
+prometheus/load_test/tank_errors.log
+prometheus/tank_errors.log

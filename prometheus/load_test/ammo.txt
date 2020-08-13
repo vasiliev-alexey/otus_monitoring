@@ -1,0 +1,7 @@
+96 case
+GET /test.html HTTP/1.1
+Host: hostname.com
+User-Agent: tank
+Accept: html
+Connection: Close
+
