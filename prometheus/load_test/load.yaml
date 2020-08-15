@@ -1,11 +1,11 @@
 phantom:
-  address: localhost:8080
+  address: u-serv:8080
   ssl: false
   load_profile:
     load_type: rps
-    schedule: line(10, 50, 2m) const(100, 5m)
+    schedule: line(30, 200, 3m) const(300, 2m)
   ammofile: ammo.txt
-  instances: 30
+  instances: 300
 
 #autostop:
 #  autostop:

@@ -7,3 +7,7 @@ zabbix/install/.ZBX_DB_*_FILE
 prometheus/load_test/logs
 prometheus/load_test/tank_errors.log
 prometheus/tank_errors.log
+
+prometheus/nginx_log/*
+!/prometheus/nginx_log/.gitkeep
+

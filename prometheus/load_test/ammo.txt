@@ -1,7 +1,13 @@
-96 case
+97 case
 GET /test.html HTTP/1.1
-Host: hostname.com
+Host: example.com
 User-Agent: tank
 Accept: html
 Connection: Close
 
+99 case
+GET /test_err.html HTTP/1.1
+Host: example.com
+User-Agent: tank
+Accept: html
+Connection: Close
