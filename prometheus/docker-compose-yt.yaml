@@ -1,0 +1,19 @@
+version: "3.2"
+services:
+  ya-tank:
+    image: "direvius/yandex-tank"
+#    depends_on: [nginx]
+#    network_mode: "host"
+    environment:
+      - SSH_AUTH_SOCK=/ssh-agent
+    volumes:
+      - ./load_test:/var/loadtest
+      - $SSH_AUTH_SOCK:/ssh-agent
+
+    networks:
+      monitoring:
+
+
+networks:
+  monitoring:
+
