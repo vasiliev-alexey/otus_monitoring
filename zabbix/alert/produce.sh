@@ -1,9 +1,5 @@
 #!/bin/bash
 
-echo "***************************************************************************"
-echo "                               Генерируем метрики                          "
-echo "***************************************************************************"
-
 
 cat << EOF
 { "data": [
@@ -25,7 +21,7 @@ for item in "metric1"  "metric2" "metric3"; do
 done
 
 # push all these trapper values back to zabbix
-zabbix_sender -vv  -s  $agenthost  -z $zserver -p $zport -i /tmp/zdata.txt
+zabbix_sender -vv  -s  $agenthost  -z $zserver -p $zport -i /tmp/zdata.txt >> /dev/null 2>&1
 # >> /tmp/zsender.log 2>&1 
 
 
