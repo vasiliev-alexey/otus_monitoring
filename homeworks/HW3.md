@@ -26,7 +26,7 @@
 * создать свою папку - - vasiliev-alexey-folder
  ![](img/gr_folder.png) 
 
-* разрешить доступ к своей дашборде только своей team - создана своя папка, туда помещен dashboard - выданы права на папку, от нее dashboard наследовал права доступа
+* разрешить доступ к своей [дашборде](http://zabbix.systemctl.su/d/siESXBHGk/vasiliev-alexey-dashboard?orgId=1&refresh=10s&from=now-1h&to=now) только своей team - создана своя папка, туда помещен dashboard - выданы права на папку, от нее dashboard наследовал права доступа
  ![](img/gr_folder_permission.png) 
 
 
