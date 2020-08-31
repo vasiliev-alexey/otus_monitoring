@@ -51,3 +51,42 @@
     WantedBy=multi-user.target
     Alias=victoria-metrics.service
 ~~~
+
+6 . Создаем свой [стенд](../victoria-metrics/docker-compose.yaml) с Prometheus ,  Grafana и NodeExpoter
+
+* В [конфиг](../victoria-metrics/config/prometheus.yml) Prometheus  подключаем  в качестве хранилища victoria-metrics
+
+~~~ yaml
+    global:
+    scrape_interval:     15s # 
+    ##  подключаем  в качестве хранилища victoria-metrics
+    remote_write:
+    - url: http://localhost:8428/api/v1/write
+
+    scrape_configs:
+    - job_name: 'prometheus'
+        scrape_interval: 5s
+    - job_name: node
+        static_configs:
+        - targets:
+        - localhost:9100 
+
+~~~
+
+В [конфиг](../victoria-metrics/grafana/provisioning/datasources/all.yml) Grafana добавляем DataSource victoria-metrics
+
+~~~ yaml
+    datasources:
+        - name: 'vm'
+        type: 'prometheus'
+        access: 'browser'
+        url: 'http://localhost:8428'
+        is_default: true
+        editable: false
+~~~
+
+Добавим в Grafana [dasboard](../victoria-metrics/grafana/dashboards/node-exporter-full_rev21.json)
+
+и получим результат
+ ![](img/grafana-vm.png) 
+ 
