@@ -11,3 +11,4 @@ prometheus/tank_errors.log
 prometheus/nginx_log/*
 !/prometheus/nginx_log/.gitkeep
 
+victoria-metrics/prometheus
