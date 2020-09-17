@@ -15,8 +15,11 @@
 1. C Docker и metricbeat подружить так и не получилось - с правами не разобрался, поэтому ставим [по инструкции](https://sysadmins.co.za/ship-your-logs-to-elasticsearch-with-filebeat/)  
 ! Ставим версию 7.8.0, так как в последней  7.9.1  - [сломали filebeat](https://discuss.elastic.co/t/filebeat-setup-isnt-working-after-update-to-7-9-0/245564/6)
 
-* Конфигурации системного модуля [filebeat](../beats/configs/filebeat-module-system.yaml)
-* Конфигурации  [filebeat](../beats/configs/filebeat.yaml)
+* Конфигурация системного модуля [filebeat](../beats/configs/filebeat-module-system.yaml)
+* Конфигурация  [filebeat](../beats/configs/filebeat.yaml)
+* Конфигурация  [heartbeat](../beats/configs/heartbeat.yaml)
+* Конфигурация  [metricbeat](../beats/configs/metricbeat.docker.yaml)
+
 
 
 2. Открываем kibana и делаем скриншоты
