@@ -1,0 +1,14 @@
+heartbeat.monitors:
+- type: http
+  urls: ["http://google.com"]
+  schedule: '@every 10s'
+  timeout: 16s
+- type: http
+  urls: ["http://otus.ru"]
+  schedule: '*/5 * * * * * *'
+
+output.elasticsearch:
+  # Array of hosts to connect to.
+  hosts: ["elasticsearch:9200"]
+  username: "elastic"
+  password: "changeme"
