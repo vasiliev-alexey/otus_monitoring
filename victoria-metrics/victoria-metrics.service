@@ -1,0 +1,15 @@
+[Unit]
+Description=victoria-metrics
+Documentation=
+After=network-online.target
+
+[Service]
+
+LimitNOFILE=65536
+ExecStart=/lab/victoria-metrics/victoria-metrics-prod -storageDataPath /lab/victoria-metrics/ -retentionPeriod 12
+KillMode=control-group
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+Alias=victoria-metrics.service

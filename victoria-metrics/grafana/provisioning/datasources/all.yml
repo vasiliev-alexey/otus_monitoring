@@ -1,0 +1,15 @@
+datasources:
+- name: 'Prometheus'
+  type: 'prometheus'
+  access: 'browser'
+  url: 'http://localhost:9090'
+  is_default: false
+  editable: false
+
+  
+- name: 'vm'
+  type: 'prometheus'
+  access: 'browser'
+  url: 'http://localhost:8428'
+  is_default: true
+  editable: false
